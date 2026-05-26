@@ -2,8 +2,8 @@ from pathlib import Path
 
 from flask import Flask
 
-from .routes import main
-from .store import VendoraStore
+from routes import main
+from store import VendoraStore
 
 
 def create_app():
