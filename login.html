@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vendora Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="login-body">
+  <form class="login-card" method="post">
+    <div class="brand brand-dark"><span>V</span> Vendora</div>
+    <h1>Welcome back</h1>
+    <p>Sign in to access the inventory and point-of-sale workspace.</p>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+    <label>Username <input name="username" value="admin" required></label>
+    <label>Password <input name="password" type="password" value="admin123" required></label>
+    <button type="submit">Sign in</button>
+    <small>Demo accounts: admin/admin123 or cashier/cashier123</small>
+  </form>
+</body>
+</html>
